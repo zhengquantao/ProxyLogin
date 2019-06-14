@@ -2,45 +2,42 @@ import json
 import requests
 
 
-def weibo_url(client_id, redirect_url):
-    """
-    WEIBO URL
-    :param client_id: your weibo appID
-    :param redirect_url: your weibo redirect_url
-    :return: WEIBO URL
-    """
-    weibo = "https://api.weibo.com/oauth2/authorize?client_id={client_id}&redirect_uri={redirect_uri}".format(
-        client_id=client_id, redirect_uri=redirect_url)
-    return weibo
-
-
-def qq_url(client_id, redirect_url):
-    """
-    QQ URL
-    :param client_id: your qq appID
-    :param redirect_url: your qq redirect_url
-    :return: QQ URL
-    """
-    qq = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id={client_id}\
-    &redirect_uri={redirect_uri}&scope=get_user_info".format(client_id=client_id, redirect_uri=redirect_url)
-    return qq
-
-
-def weixin_url(client_id, redirect_url):
-    """
-    WEIXIN URL
-    :param client_id: your weixin appID
-    :param redirect_url: your weixin redirect_url
-    :return: WEIXIN URL
-    """
-    weixin = "https://open.weixin.qq.com/connect/qrconnect?appid={client_id}&redirect_uri={redirect_uri}\
-    &response_type=code&scope=SCOPE&state=STATE#wechat_redirect".format(
-        client_id=client_id, redirect_uri=redirect_url
-    )
-    return weixin
-
-
 class ProxyLogin(object):
+
+    def weibo_url(self, client_id, redirect_url):
+        """
+        WEIBO URL
+        :param client_id: your weibo appID
+        :param redirect_url: your weibo redirect_url
+        :return: WEIBO URL
+        """
+        weibo = "https://api.weibo.com/oauth2/authorize?client_id={client_id}&redirect_uri={redirect_uri}".format(
+            client_id=client_id, redirect_uri=redirect_url)
+        return weibo
+
+    def qq_url(self, client_id, redirect_url):
+        """
+        QQ URL
+        :param client_id: your qq appID
+        :param redirect_url: your qq redirect_url
+        :return: QQ URL
+        """
+        qq = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id={client_id}\
+        &redirect_uri={redirect_uri}&scope=get_user_info".format(client_id=client_id, redirect_uri=redirect_url)
+        return qq
+
+    def weixin_url(self, client_id, redirect_url):
+        """
+        WEIXIN URL
+        :param client_id: your weixin appID
+        :param redirect_url: your weixin redirect_url
+        :return: WEIXIN URL
+        """
+        weixin = "https://open.weixin.qq.com/connect/qrconnect?appid={client_id}&redirect_uri={redirect_uri}\
+        &response_type=code&scope=SCOPE&state=STATE#wechat_redirect".format(
+            client_id=client_id, redirect_uri=redirect_url
+        )
+        return weixin
 
     def weibo(self, client_id, client_secret, url, code):
         """

@@ -94,15 +94,15 @@ class UploadCommand(Command):
 
 # Where the magic happens:
 setup(
-    name=NAME,
+    name='ProxyLogin',
     version=about['__version__'],
-    description=DESCRIPTION,
-    long_description=long_description,
+    description='My project for Third party login',
+    long_description='',
     long_description_content_type='text/markdown',
-    author=AUTHOR,
-    author_email=EMAIL,
+    author='taozhengqian',
+    author_email='1483906080@qq.com',
     python_requires=REQUIRES_PYTHON,
-    url=URL,
+    url='https://github.com/zhengquantao/ProxyLogin',
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
@@ -110,7 +110,7 @@ setup(
     # entry_points={
     #     'console_scripts': ['mycli=mymodule:cli'],
     # },
-    install_requires=REQUIRED,
+    install_requires=['requests'],
     extras_require=EXTRAS,
     include_package_data=True,
     license='MIT',
