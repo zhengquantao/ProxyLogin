@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ProxyLogin",
-    version="0.0.1",
+    version="1.0.0",
     author="taozhengquan",
     author_email="1483906080@qq.com",
     description="A project for Third party login",
