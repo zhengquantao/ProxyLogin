@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ProxyLogins",
+    name="AgentLogin",
     version="1.0.0",
     author="taozhengquan",
     author_email="1483906080@qq.com",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/zhengquantao/ProxyLogin",
     # packages=setuptools.find_packages(),
-    packages=['ProxyLogins'],
+    packages=['AgentLogin'],
     install_requires=['requests'],
     classifiers=[
         "Programming Language :: Python :: 3",

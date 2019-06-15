@@ -2,7 +2,7 @@ import json
 import requests
 
 
-class ProxyLogin(object):
+class AgentLogin(object):
 
     def weibo_url(self, client_id, redirect_url):
         """
