@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="AgentLogin",
-    version="1.0.0",
+    version="2.0.0",
     author="taozhengquan",
     author_email="1483906080@qq.com",
     description="A project for Third party login",
