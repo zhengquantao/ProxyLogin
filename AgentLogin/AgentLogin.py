@@ -71,7 +71,7 @@ def weibo(client_id, client_secret, url, code):
     }).text
     info_message_loads = json.loads(info_message)
     userinfo = info_message_loads['name']
-    return userinfo
+    return (userinfo, uid)
 
 
 def all_weibo(client_id, client_secret, url, code):
@@ -153,7 +153,7 @@ def qq(client_id, client_secret, url, code):
     response_user_info = json.loads(response_user_info)
     userinfo = response_user_info['nickname']
 
-    return userinfo
+    return (userinfo, open_id)
 
 
 def all_qq(client_id, client_secret, url, code):
