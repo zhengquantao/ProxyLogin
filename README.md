@@ -3,22 +3,33 @@ A project for Third party login
 
 目前只支持 腾讯QQ,微信,微博 第三方登录
 
-安装 pip install AgentLogin
+### 安装 
+```bash
 
+$ pip install AgentLogin
 
-from AgentLogin import AgentLogin
+```
+### QQ登录
 
-qq_url = AgentLogin.qq_url(client_id, redirect_uri)
+```python
 
-把这个qq_url链接放到你的<a href="{{ qq_url }}">QQ登录<a>
+  from AgentLogin import AgentLogin
 
-(user, user_id) = AgentLogin.qq(client_id, client_secret, redirect_uri, code)
+  qq_url = AgentLogin.qq_url(client_id, redirect_uri)
 
-code: 用户授权登录回调参数code
-client_id:腾讯开放平台上app的APPID名
-client_secret: 腾讯开放平台上app的secret名
-redirect_uri: 腾讯开放平台上app的回调url
-user: 返回qq的用户名
+  # 把这个qq_url链接放到你的<a href="{{ qq_url }}">QQ登录<a>
+
+  (user, user_id) = AgentLogin.qq(client_id, client_secret, redirect_uri, code)
+
+```
+### 参数
+
+* code: 用户授权登录回调参数code
+* client_id:腾讯开放平台上app的APPID名
+* client_secret: 腾讯开放平台上app的secret名
+* redirect_uri: 腾讯开放平台上app的回调url
+* user: 返回qq的用户名
+* user_id: 服务器返回的唯一用户ID
 
 
 有使用AgentLogin的项目：http://120.78.176.77, http://101.132.132.181:8080
