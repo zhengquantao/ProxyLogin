@@ -17,7 +17,7 @@ $ pip install AgentLogin
 
   qq_url = AgentLogin.qq_url(client_id, redirect_uri)
 
-  # 把这个qq_url链接放到你的<a href="{{ qq_url }}">QQ登录<a>
+  # 把这个qq_url链接放到你的html页面上 <a href="{{ qq_url }}">QQ登录<a>
 
   (user, user_id) = AgentLogin.qq(client_id, client_secret, redirect_uri, code)
 
